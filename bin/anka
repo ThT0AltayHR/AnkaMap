@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Anka global launcher -- forwards all args to anka.py so you can run
+# `anka -u ...` from anywhere, without `cd`-ing into the project or
+# typing `python3 anka.py`.
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+exec python3 "$SCRIPT_DIR/anka.py" "$@"
